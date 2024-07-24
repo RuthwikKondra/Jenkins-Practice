@@ -33,8 +33,10 @@ pipeline {
             steps {
                 sh 'echo This is Deploy'
             }
-            steps {
-                echo "Hello ${params.PERSON}"
+           
+        }
+        stage('parameters') {
+            steps {echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
                 echo "Toggle: ${params.TOGGLE}"
                 echo "Choice: ${params.CHOICE}"
